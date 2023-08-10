@@ -31,3 +31,19 @@ test("sumEvenValueObject should return the sum of even number value from object 
   const expectedValue = 12;
   expect(highestValue).toEqual(expectedValue);
 });
+
+test("sumEvenValueObject should return 'Input is not object' when the input is not an object", () => {
+  const object = "test";
+
+  const highestValue = sumEvenValueObject(object);
+  const expectedValue = "Input is not object";
+  expect(highestValue).toEqual(expectedValue);
+});
+
+test("sumEvenValueObject should return 'Object is empty' when the input is empty object", () => {
+  const object = {};
+
+  const highestValue = sumEvenValueObject(object);
+  const expectedValue = "Object is empty";
+  expect(highestValue).toEqual(expectedValue);
+});
