@@ -23,3 +23,19 @@ test("highestSumSubarray should return the highest sum from subarray (3)", () =>
   const expectedValue = 5;
   expect(highestValue).toEqual(expectedValue);
 });
+
+test("highestSumSubarray should return 'Array is Empty' when array input is empty", () => {
+  const array = [];
+  const number = 2;
+  const highestValue = highestSumSubarray(array, number);
+  const expectedValue = "Array Is Empty";
+  expect(highestValue).toEqual(expectedValue);
+});
+
+test("highestSumSubarray should return 'Number input should in integer' when number input is not number", () => {
+  const array = [-3, 4, 0, -2, 6, -1];
+  const number = "2";
+  const highestValue = highestSumSubarray(array, number);
+  const expectedValue = "Number input should in integer";
+  expect(highestValue).toEqual(expectedValue);
+});

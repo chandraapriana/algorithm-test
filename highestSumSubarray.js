@@ -1,4 +1,6 @@
 const highestSumSubarray = (array, number) => {
+  if (array.length === 0) return "Array Is Empty";
+  if (typeof number !== "number") return "Number input should in integer";
   const tempArray = [];
   for (let i = 0; i < array.length; i++) {
     if (i + number > array.length) break;
@@ -20,5 +22,7 @@ const findHighestValue = (array) => {
   }
   return highestValue;
 };
+
+console.log(highestSumSubarray([1, 2, 3], "2"));
 
 module.exports = highestSumSubarray;
