@@ -23,6 +23,4 @@ const findHighestValue = (array) => {
   return highestValue;
 };
 
-console.log(highestSumSubarray([1, 2, 3], "2"));
-
 module.exports = highestSumSubarray;
